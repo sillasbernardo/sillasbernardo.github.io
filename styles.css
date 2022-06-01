@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+    color: white;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    background-color: coral;
+    color: white;
+}
