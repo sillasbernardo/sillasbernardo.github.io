@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <script type="module" src="dashboard_control.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="JS/dashboard_control.js"></script>
+    <link rel="stylesheet" href="dashboard_style.css">
 </head>
 <body>
-    <h1>Remove repo(s) from Portfolio</h1>
-    <div id="list-repos"></div>
-    <button type="submit" id="get-repos">Get repos</button>
+    <div class="container">
+        <div class="navigation-section">
+            <h2>DASHBOARD</h2>
+            <div class="exclude-repos">
+                <ul>
+                    <li><a id="exclude_repo_link" href="#">Exclude repo(s)</a></li>
+                </ul>
+                <!-- <button type="submit" id="get-repos">Get repos</button> -->
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="exclude_repo_board">
+                <div id="repo_board"></div>
+                <div id="list-repos"></div>
+                <div id="excluded-repos"></div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
+
+<!-- 
+    Add dev skills
+    Add designer skills
+    Add item to portfolio
+ -->

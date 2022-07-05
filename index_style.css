@@ -100,55 +100,6 @@ body{
         justify-content: center;
     }
 
-    /* .skills-btn{
-        margin: 20px 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        visibility: hidden;
-    }
-
-    .skills-btn>a{
-        font-family: Data Control;
-        text-align: center;
-        padding: 15px 40px;
-        cursor:pointer;
-        overflow: hidden;
-        color: #fff;
-        transition: all .3s;
-    }
-
-    .skills-btn>a:nth-of-type(1)::before{
-        content: "";
-        background: #b0fbff;
-        display: block;
-        width: 10px;
-        height: 2px;
-        margin-bottom: 10px;
-        transition: all .2s;
-    }
-
-    .skills-btn>a:nth-of-type(2)::before{
-        content: "";
-        background: #b0fbff;
-        display: block;
-        width: 10px;
-        height: 2px;
-        position: relative;
-        left: 100%;
-        margin-bottom: 10px;
-        transition: all .2s;
-    }
-
-    .skills{
-        color: #fff;
-        font-family: Data Control;
-        margin: 0 30px;
-
-        visibility: hidden;
-    } */
-
     .designer-skills{
     
     }
@@ -156,7 +107,7 @@ body{
     .skills-div{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     table {

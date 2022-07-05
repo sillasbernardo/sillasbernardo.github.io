@@ -5,7 +5,7 @@ import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 const gh_username = 'sillasbernardo';
 
 const gh_access = new Octokit({
-    auth: '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',
+    auth: '',
     userAgent: gh_username,
     baseUrl: 'https://api.github.com'
 })
