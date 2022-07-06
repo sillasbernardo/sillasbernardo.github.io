@@ -22,6 +22,7 @@ gh_access.rest.repos.listForUser({
     const repo_div_details = [];
     const repo_images = []; // The element 'img' 
     const repo_details_desc = [];
+    const repo_languages = [];
     const view_project_btn = [];
 
     const images = []; // The image itself
@@ -51,6 +52,18 @@ gh_access.rest.repos.listForUser({
                     /* p element > div 'details' */
                     repo_details_desc[index] = document.createElement('p'); // Creates p element
                     repo_details_desc[index].textContent = res.data[index].description;
+
+                    /* p element > div 'details' */
+                    fetch(res.data[index].languages_url)
+                        .then(result => result.json())
+                        .then(languages => {
+                            for (const lang in languages){
+                                console.log(lang)
+                            }
+                        })
+
+                    repo_languages[index] = document.createElement('p');
+                    repo_languages[index].textContent = res.data[index].languages_url;
             
                     /* btn element > div 'details' */
                     view_project_btn[index] = document.createElement('a'); // Creates button
@@ -74,9 +87,7 @@ gh_access.rest.repos.listForUser({
 
                     repo_div_details[index].appendChild(repo_images[index]); // Add images to repo_div_images
                     repo_div_details[index].appendChild(repo_details_desc[index]); // Add description to repo_div_details
-                }else{
-                    repo_div_details[index].appendChild(repo_details_desc[index]); // Add description to repo_div_details
-                    throw new Error("Image not found");
+                    repo_div_details[index].appendChild(repo_languages[index]);
                 }
                 
             }).catch(error => {

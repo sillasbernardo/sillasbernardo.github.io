@@ -21,27 +21,156 @@ body{
     background-color: rgb(4, 9, 31);
 }
 
-.header-navigation>nav{
-    color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    list-style: none;
-    font-family: Data Control;
-    cursor: pointer;
-    background-color: rgb(4, 9, 31);
-    position: fixed;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+@media screen and (min-width: 900px){
+    .header-navigation>nav{
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        list-style: none;
+        font-family: Data Control;
+        cursor: pointer;
+        background-color: rgb(4, 9, 31);
+        position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    .header-navigation li{
+        padding: 15px 50px;
+    }
+    
+    .header-navigation li:hover{
+        background: rgb(16, 22, 51);
+        transform: scale(1.1);
+    }
+    
+    .container-1{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px 10px;
+    }
 
-.header-navigation li{
-    padding: 15px 50px;
-}
+    .name{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
-.header-navigation li:hover{
-    background: rgb(16, 22, 51);
-    transform: scale(1.1);
+    .name span{
+        color: #b0fbff;
+        font-family: Data Control;
+        font-size: 32pt;
+    }
+
+    .name span:nth-of-type(2){
+        font-weight: 800;
+        margin-left: 10px;
+    }
+
+    .roles{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: left;
+    }
+
+    .skills-div{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .about{
+        background:#112240;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .about h1{
+        color: #b0fbff;
+        font-family: Data Control;
+    }
+
+    .about p{
+        color: white;
+        text-align: justify;
+    }
+    
+        /* -- Portfolio -- */
+
+        .work{
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #ebebeb;
+        }
+    
+        .work>h1{
+            text-align: center;
+            color: #112240;
+            font-family: Data Control;
+        }
+    
+        #portfolio{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #portfolio>.title{
+            color: #112240;
+            font-size: 14pt;
+            display: inherit;
+            justify-content: right;
+            margin-top: 20px;
+            border-top-left-radius: 20%;
+            border-bottom-left-radius: 20%;
+            padding: 10px;
+        }
+    
+        .details{
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        .details>img{
+            width: 30%;
+        }
+    
+        .details>p{
+            color: #112240;
+            font-size: 10pt;
+            text-align: justify;
+            margin-left: 10px;
+        }
+    
+        .view-more{
+            margin: 15px 0;
+            background-color: #112240;
+            color: #ebebeb;
+            padding: 7px 2px;
+            width: 100px;
+            border-style: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            font-family: Data Control;
+            font-size: 11pt;
+            position: relative;
+            left: 70%;
+            text-decoration: none;
+            text-align: center;
+        }
 }
 
 @media screen and (max-width: 900px) {
@@ -60,7 +189,7 @@ body{
     }
 
     .header-navigation>nav{
-        color: #b0fbff;
+        color: white;
         background-color: rgb(4, 9, 31);
         width: 100%;
         list-style: none;
@@ -71,9 +200,6 @@ body{
         padding-bottom: 3px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         font-family: Data Control;
-        animation-name: changeMenuColor;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
     }
 
     .header-navigation>nav>li{
@@ -82,7 +208,7 @@ body{
 
     .header-navigation>nav>li:hover{
         font-weight: 900;
-        transform: scale(1.2);
+        transform: scale(1.05);
         transition: 0.3s ease-in;
     }
 
@@ -95,41 +221,31 @@ body{
     /* -- Presentation --*/
 
     .name{
+        color: #b0fbff;
         font-family: Data Control;
         font-size: 28pt;
-        color: #b0fbff;
         display: flex;
         justify-content: center;
-    }
-
-    .name>span{
-        margin: 0 6px;
     }
 
     .name>span:nth-of-type(2){
-        font-weight: bold;
+        font-weight: 800;
+        margin-left: 10px;
     }
 
-    .presentation{
-        margin: 20px 0 100px 0;
-    }
-
-    .presentation>span{
-        font-family: Data Control;
-        font-size: 16pt;
-        color: #ccd6f6;
+    .roles{
+        color: white;
         display: flex;
-        justify-content: center;
-    }
-
-    .designer-skills{
-    
+        flex-direction: column;
+        text-align: center;
+        font-family: Data Control;
     }
 
     .skills-div{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 50px;
     }
 
     table {
@@ -138,33 +254,9 @@ body{
     }
 
     th{
-        padding: 40px 0px 20px;
+        padding: 20px 0px 20px;
         font-family: Data Control;
         font-size: 14pt;
-    }
-
-    #dev-skills-header::before{
-        content: "";
-        display: block;
-        background: #b0fbff;
-        width: 10px;
-        height: 3px;
-        margin-bottom: 10px;
-        position: relative;
-        left: 2%;
-        transition: all .3s;
-    }
-
-    #designer-skills-header::before{
-        content: "";
-        display: block;
-        background: #b0fbff;
-        width: 10px;
-        height: 3px;
-        margin-bottom: 10px;
-        position: relative;
-        left: 92%;
-        transition: all .3s;
     }
 
     .designer-skills{
@@ -206,55 +298,6 @@ body{
         color: #112240;
         font-family: Data Control;
     }
-
-/*     .portfolio-content{
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .images{
-        text-align: center;
-    }
-
-    .images>img{
-        width: 80%;
-    }
-
-    .details{
-        display: flex;
-        flex-direction: column;
-        margin: 10px 20px;
-        padding: 15px;
-        border-radius: 5px;
-    }
-
-    .details>h4{
-        color: #b0fbff;
-        font-family: Data Control;
-        display: flex;
-        justify-content: right;
-        margin: 0 0 10px 0;
-    }
-
-    .details>p{
-        color: #ccd6f6;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: justify;
-    }
-
-    .view-more{
-        margin: 20px 0 5px 0;
-        width: 100px;
-        height: 30px;
-        outline: none;
-        border-style: none;
-        background-color: #b0fbff;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        position: relative;
-        left: 70%;
-    } */
 
     #portfolio{
         display: flex;
